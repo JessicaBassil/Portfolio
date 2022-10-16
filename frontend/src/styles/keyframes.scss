@@ -1,0 +1,27 @@
+@keyframes letter-dance {
+    0%{
+        color: white;
+    }
+    25%{
+        color: $dark-color;
+        position: relative;
+        bottom: .2rem;
+    }
+    100%{
+        bottom: 0rem;
+    }    
+}
+
+@keyframes word-dance{
+    0%{
+        color: $dark-color;
+    }
+    25%{
+        color: white;
+        position: relative;
+        bottom: .2rem;
+    }
+    100%{
+        bottom: 0rem;
+    }
+}

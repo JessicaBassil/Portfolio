@@ -1,0 +1,9 @@
+$dark-color: #44364B;
+
+@function get-light-color-with-opacity($opacity){
+    @return (rgba(245, 173, 140, $opacity))
+};
+
+@function get-dark-color-with-opacity($opacity){
+    @return (rgba(68, 54, 75, $opacity))
+};

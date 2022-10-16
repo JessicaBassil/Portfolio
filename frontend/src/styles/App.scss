@@ -1,0 +1,116 @@
+@import "./colors.scss", "fonts.scss", "flex.scss";
+@import "./generic-design.scss", "./general-classes.scss";
+@import "./keyframes.scss";
+
+.special-hover-container{
+    top: 0;
+    left:0;
+}
+
+.header{
+    padding: .5rem;
+    margin-bottom: .5rem;
+
+    .logo{
+        padding-left: 2rem;
+        font-size: 1.5rem;
+    }
+
+    a{
+        line-height: 2em;
+        color: $dark-color;
+        font-weight: 400;
+        padding: 1em;
+        text-decoration: none;
+    }
+}
+
+.body{
+    .top-section{
+        .about{
+            background-color: get-light-color-with-opacity(0.95);
+            padding:1rem;
+            color: white;
+            font-size:1.7rem;
+
+            position: relative;
+            max-width:16rem;
+            min-width: 16rem;
+
+            margin-right: .8rem;
+            margin-left: 1.3rem;
+
+            .role{
+                font-size: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .contact-btn{
+                background-color: $dark-color;
+                font-family: $handwriting;
+                color: white;
+                font-size: 1.3rem;
+                align-self: flex-start;
+                opacity: .8;
+                padding:.3rem;
+                padding-left:.5rem;
+                padding-right:2.5rem;
+                border: 0;
+                margin-top:6.6rem;
+                box-shadow: .4rem .4rem 0rem get-dark-color-with-opacity(.5);
+                transition: all .5s ease;
+            }
+
+            .contact-btn:hover{
+                box-shadow: 0rem 0rem 0rem get-dark-color-with-opacity(.5);
+                transition: all 1s ease;
+                margin-top:6rem;
+            }
+
+            .shadow{
+                margin:0;
+                right:.6rem;
+                top:.6rem;
+                min-width:18rem;
+                max-width: 18rem;
+            }
+
+        }
+
+        .image{
+            width: 60%;
+            margin-right: .5rem;
+            .shadow{
+                max-width: calc(60% - .5rem);
+                min-width: calc(60% - .5rem);
+                position: absolute;
+                z-index: -1;
+                margin-left:.6rem;
+                max-height:60vh;
+
+                
+                .shadow-child{
+                    max-width: 100%;
+                    min-width: 100%;
+                }
+
+            }
+            img{
+                width:100%;
+                object-fit:cover;
+            }
+        }
+
+    }
+
+    .waves{
+        margin-top: 3rem;
+        margin-bottom: 1.1rem;
+        flex-wrap: nowrap;
+        overflow: hidden;
+
+        img{
+            height:.9rem;
+        }
+    }
+}
