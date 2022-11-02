@@ -5,13 +5,18 @@ function SpecialHover() {
   const n = 1000
 
   return (
-    <div className='flex wrap fixed special-hover-container'>
+    <div key='special-hover' className='flex wrap fixed special-hover-container'>
       {[...Array(n)].map((elementInArray, index) => (
         <>
-          <img alt='.' key={index + 'dark'} className='special-hover-effect' src={darkbutterfly} />
           <img
             alt='.'
-            key={index + 'light'}
+            key={index.toString() + 'dark'}
+            className='special-hover-effect'
+            src={darkbutterfly}
+          />
+          <img
+            alt='.'
+            key={index.toString() + 'light'}
             className='special-hover-effect'
             src={lightbutterfly}
           />

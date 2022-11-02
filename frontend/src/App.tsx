@@ -1,9 +1,42 @@
 import './styles/App.scss'
 import SpecialHover from './components/SpecialHover'
+
 import pcpic from './svgs/pcpic.svg'
 import waves from './svgs/waves.svg'
+import github from './svgs/github.svg'
+import linkedin from './svgs/linkedin.svg'
+import youtube from './svgs/youtube.svg'
+import menu from './svgs/menu.svg'
+
+import { IProject } from './interfaces/IProject'
+import Project from './components/Project'
 
 function App() {
+  const projects: IProject[] = [
+    {
+      id: 1,
+      title: 'title',
+      image: 'test.png',
+      link: 'linktoproject',
+    },
+    {
+      id: 2,
+      title: 'title2',
+      image: 'test.png',
+      link: 'linktoproject2',
+    },
+    {
+      id: 3,
+      title: 'title3',
+      image: 'test.png',
+      link: 'linktoproject3',
+    },
+  ]
+
+  const listProjects = projects.map((project) => (
+    <Project key={project.id.toString()} project={project} />
+  ))
+
   return (
     <div className='full-screen'>
       <SpecialHover />
@@ -12,10 +45,10 @@ function App() {
         <div className='handwriting-font signature-style logo'>Jessi</div>
         <div>
           <a className='special-word-effect' href='#'>
-            About Me
+            My Projects
           </a>
           <a className='special-word-effect' href='#'>
-            My Projects
+            About Me
           </a>
           <a className='special-word-effect' href='#'>
             My Skills
@@ -56,8 +89,22 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div>
+              <div className='flex column'>
                 <button className='contact-btn'>Contact Me</button>
+                <div className='flex socials'>
+                  <a href='#' className='special-letter-effect'>
+                    <img src={youtube} alt='youtube' />
+                  </a>
+                  <a href='https://github.com/JessicaBassil' className='special-letter-effect'>
+                    <img src={github} alt='github' />
+                  </a>
+                  <a
+                    href='https://www.linkedin.com/in/jessica-bassil-260057190/'
+                    className='special-letter-effect'
+                  >
+                    <img src={linkedin} alt='linkedin' />
+                  </a>
+                </div>
               </div>
             </div>
             <div className='background-shadow'></div>
@@ -91,7 +138,8 @@ function App() {
           <img src={waves} />
         </div>
 
-        <div>my projects etc etc</div>
+        <span className='title flex column'>My Projects</span>
+        <div className='flex row projects'>{listProjects}</div>
       </div>
     </div>
   )
