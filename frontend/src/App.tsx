@@ -11,30 +11,30 @@ import menu from './svgs/menu.svg'
 import { IProject } from './interfaces/IProject'
 import Project from './components/Project'
 
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+
 function App() {
-  const projects: IProject[] = [
-    {
-      id: 1,
-      title: 'title',
-      image: 'test.png',
-      link: 'linktoproject',
-    },
-    {
-      id: 2,
-      title: 'title2',
-      image: 'test.png',
-      link: 'linktoproject2',
-    },
-    {
-      id: 3,
-      title: 'title3',
-      image: 'test.png',
-      link: 'linktoproject3',
-    },
-  ]
+  const [projects, setProjects] = useState<IProject[]>([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setLoading(true)
+        const { data } = await axios.get('/api/projects')
+        setProjects(data)
+        setLoading(false)
+      } catch (err) {
+        setError('' + err)
+      }
+    }
+    fetchProjects()
+  }, [])
 
   const listProjects = projects.map((project) => (
-    <Project key={project.id.toString()} project={project} />
+    <Project key={project._id.toString()} project={project} />
   ))
 
   return (
