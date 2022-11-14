@@ -1,9 +1,6 @@
-$dark-color: #44364B;
+$brown1: #F9F3EE;
+$brown2: #F2E6DD;
+$brown3: #E8D6C8;
+$brown4: #9C6D51;
 
-@function get-light-color-with-opacity($opacity){
-    @return (rgba(245, 173, 140, $opacity))
-};
-
-@function get-dark-color-with-opacity($opacity){
-    @return (rgba(68, 54, 75, $opacity))
-};
+$green1: #8F9772;

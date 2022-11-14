@@ -3,7 +3,7 @@
         color: white;
     }
     25%{
-        color: $dark-color;
+        color: black;
         position: relative;
         bottom: .2rem;
     }
@@ -14,7 +14,7 @@
 
 @keyframes word-dance{
     0%{
-        color: $dark-color;
+        color: black;
     }
     25%{
         color: white;

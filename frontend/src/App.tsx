@@ -1,18 +1,14 @@
 import './styles/App.scss'
-import SpecialHover from './components/SpecialHover'
-
-import pcpic from './svgs/pcpic.svg'
-import waves from './svgs/waves.svg'
-import github from './svgs/github.svg'
-import linkedin from './svgs/linkedin.svg'
-import youtube from './svgs/youtube.svg'
-import menu from './svgs/menu.svg'
 
 import { IProject } from './interfaces/IProject'
 import Project from './components/Project'
 
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+
+import { Icon } from '@iconify/react'
+
+import intropicwords from './svgs/intropicwords.svg'
 
 function App() {
   const [projects, setProjects] = useState<IProject[]>([])
@@ -38,108 +34,63 @@ function App() {
   ))
 
   return (
-    <div className='full-screen'>
-      <SpecialHover />
+    <div>
+      <header>
+        <div className='handwriting-font name'>
+          <span className='initial'>J</span>essica &nbsp;
+          <span className='initial'>B</span>assil
+        </div>
+        <div className='thin-spaced-font title'>A HARDWORKING BEE</div>
+      </header>
 
-      <div className='flex space-between header sticky'>
-        <div className='handwriting-font signature-style logo'>Jessi</div>
-        <div>
-          <a className='special-word-effect' href='#'>
-            My Projects
+      <nav className='flex'>
+        <div className='links'>
+          <a>home</a>
+          <a>my projects</a>
+          <a>about me</a>
+          <a>contact</a>
+          <a>blog</a>
+        </div>
+        <div className='socials'>
+          <a href='youtubelink'>
+            <Icon className='icon' icon='akar-icons:youtube-fill' />
           </a>
-          <a className='special-word-effect' href='#'>
-            About Me
+          <a href='githublink'>
+            <Icon icon='akar-icons:github-fill' />
           </a>
-          <a className='special-word-effect' href='#'>
-            My Skills
+          <a href='linkedinlink'>
+            <Icon icon='akar-icons:linkedin-box-fill' />
           </a>
-          <a className='special-word-effect' href='#'>
-            Blog
-          </a>
+        </div>
+      </nav>
+
+      <div className='section-intro flex'>
+        <div className='left flex column'>
+          <span className='handwriting-font'>&lt;html&gt;</span>
+          <span className='handwriting-font body-tag'>&lt;body&gt;</span>
+          <br />
+          <span className='regular-font title padd-left-10'>Full Stack Developer</span>
+          <span className='regular-font title padd-left-10'>Software Engineer</span>
+          <span className='thin-spaced-font padd-left-10'>
+            I&apos;m a programmer always looking to improve my skills and create and contribute to
+            softwares
+          </span>
+          <br />
+          <span className='handwriting-font body-tag'>&lt;body&gt;</span>
+          <span className='handwriting-font'>&lt;html&gt;</span>
+        </div>
+        <div className='right flex'>
+          <img src={intropicwords} />
         </div>
       </div>
 
-      <div className='body'>
-        <div className='flex space-around height-50 top-section'>
-          <div className='handwriting-font about'>
-            <div className='shadow'>
-              <div className='shadow'></div>
-            </div>
-            <div className='flex column space-between'>
-              <div>
-                <span className='special-letter-effect'>H</span>
-                <span className='special-letter-effect'>e</span>
-                <span className='special-letter-effect'>y</span>
-                <span className='special-letter-effect'>,</span>
-                <br /> <span className='special-letter-effect'>I</span>
-                <span className='special-letter-effect'> &apos; </span>
-                <span className='special-letter-effect'>m</span>
-                <span className='signature-style special-word-effect'> Jessica </span>
-                <span className='special-letter-effect'>,</span>
-                <br />
-                <div className='role flex column'>
-                  <div>
-                    <span className='special-letter-effect'>Full </span>
-                    <span className='special-letter-effect'>Stack </span>
-                    <span className='special-letter-effect'>Developer </span> <br />
-                  </div>
-                  <div>
-                    <span className='special-letter-effect'>Software </span>
-                    <span className='special-letter-effect'>Engineer </span>
-                  </div>
-                </div>
-              </div>
-              <div className='flex column'>
-                <button className='contact-btn'>Contact Me</button>
-                <div className='flex socials'>
-                  <a href='#' className='special-letter-effect'>
-                    <img src={youtube} alt='youtube' />
-                  </a>
-                  <a href='https://github.com/JessicaBassil' className='special-letter-effect'>
-                    <img src={github} alt='github' />
-                  </a>
-                  <a
-                    href='https://www.linkedin.com/in/jessica-bassil-260057190/'
-                    className='special-letter-effect'
-                  >
-                    <img src={linkedin} alt='linkedin' />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className='background-shadow'></div>
-          </div>
-          <div className='height-50 image'>
-            <div className='shadow'>
-              <div className='shadow  shadow-child'></div>
-            </div>
-            <img className='height-50' src={pcpic} />
-          </div>
-        </div>
+      <div className='section-quote thin-spaced-font'>
+        I always aim to write the best clean code I can.
+      </div>
 
-        <div className='waves flex'>
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-          <img src={waves} />
-        </div>
-
-        <span className='title flex column'>My Projects</span>
-        <div className='flex row projects'>{listProjects}</div>
+      <div className='section-projects'>
+        <span className='title'>My Projects</span>
+        <div>{listProjects}</div>
       </div>
     </div>
   )

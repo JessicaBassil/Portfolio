@@ -1,6 +1,20 @@
-$handwriting: 'Pacifico-Regular' ,Brush Script MT, Brush Script Std, cursive;
+$handwriting: 'Brittany Signature' ,Brush Script MT, Brush Script Std, cursive;
+
+$thin-spaced: 'Arima Madurai Thin', 'Times New Roman', Times, serif;
+
+$regular: 'Bentham', 'Times New Roman', Times, serif;
+
+@font-face {
+    font-family: 'Bentham';
+    src: url("../fonts/Bentham-Regular.ttf");
+}
 
 @font-face{
-    font-family: 'Pacifico-Regular';
-    src: url("../fonts/Pacifico-Regular.ttf");
+    font-family: 'Brittany Signature';
+    src: url("../fonts/BrittanySignature-MaZx.ttf");
+}
+
+@font-face{
+    font-family: 'Arima Madurai Thin';
+    src: url("../fonts/ArimaMadurai-Thin.ttf");
 }
