@@ -5,11 +5,15 @@ function Project(props: { project: IProject }) {
 
   return (
     <>
-      <div className='project flex column'>
-        <div className='flex column credentials'>
-          <img alt='project gif' className='image' src={require(`../images/${project.image}`)} />
-          <span>{project.title}</span>
-        </div>
+      <div className='project'>
+        <img alt='project gif' className='image' src={require(`../images/${project.image}`)} />
+
+        <div className='dash'>_</div>
+
+        <span className='title'>{project.title}</span>
+        <a href='#' className='link'>
+          SEE DETAILS
+        </a>
       </div>
     </>
   )

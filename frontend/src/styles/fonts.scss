@@ -1,6 +1,9 @@
 $handwriting: 'Brittany Signature' ,Brush Script MT, Brush Script Std, cursive;
 
+$xbold-spaced: 'Arima Madurai Extra Bold', 'Times New Roman', Times, serif;
 $thin-spaced: 'Arima Madurai Thin', 'Times New Roman', Times, serif;
+$light-spaced: 'Arima Madurai Light', 'Times New Roman', Times, serif;
+
 
 $regular: 'Bentham', 'Times New Roman', Times, serif;
 
@@ -17,4 +20,14 @@ $regular: 'Bentham', 'Times New Roman', Times, serif;
 @font-face{
     font-family: 'Arima Madurai Thin';
     src: url("../fonts/ArimaMadurai-Thin.ttf");
+}
+
+@font-face{
+    font-family: 'Arima Madurai Light';
+    src: url("../fonts/ArimaMadurai-Light.ttf");
+}
+
+@font-face{
+    font-family: 'Arima Madurai Extra Bold';
+    src: url("../fonts/ArimaMadurai-ExtraBold.ttf");
 }

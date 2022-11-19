@@ -1,3 +1,90 @@
-button{
+button, .link, a{
     cursor: pointer;
 }
+
+body{
+    background-color: $brown4;
+    background-image: url('../svgs/bg.svg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color:black;
+}
+
+
+/* CUSTOM INPUT */
+@mixin custom-input{
+    color: $brown4;
+    text-transform: uppercase;
+    opacity: 1;
+    font-family: $regular;
+}
+
+input::-webkit-input-placeholder {/* Chrome/Opera/Safari/Edge */
+    @include custom-input;
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+    @include custom-input;
+}
+
+input:-ms-input-placeholder {/* IE 10+ */
+    @include custom-input;
+}
+
+input::-moz-placeholder {/* Firefox 19+ */
+	opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
+    @include custom-input;
+}
+
+input:-moz-placeholder {/* Firefox 18- */
+	opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
+    @include custom-input;
+}
+
+input::placeholder, textarea::placeholder {
+    @include custom-input;
+}
+
+input, textarea{
+    padding: .6rem;
+    background-color: $brown1;
+    border: solid 1px $brown4;
+}
+
+input:focus, textarea:focus{
+    border: solid 1px $brown4;
+    outline: 0;
+    font-family: $regular;
+}
+
+/* CUSTOM SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $brown1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $green1; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $green2; 
+  }

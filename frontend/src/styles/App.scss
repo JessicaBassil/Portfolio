@@ -26,12 +26,14 @@ header{
 }
 
 nav{
+    z-index:10;
     background-color: $brown2;
     font-family: $thin-spaced;
     text-transform: uppercase;
     justify-content: space-between;
     padding: .1rem;
-
+    position: sticky;
+    top:0;
     .links a{
         font-size:.8rem;
         padding-left:3rem;
@@ -55,6 +57,7 @@ nav{
 .section-intro{
     background-color: $brown3;
     max-height:60vh;
+    justify-content: space-around;
 
     .left{
         padding:2rem;
@@ -78,7 +81,6 @@ nav{
     .right{
         background-color: $green1;
         padding-left:6rem;
-        
         img{
             max-height:60vh;
         }
@@ -90,4 +92,214 @@ nav{
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: $brown1;
+}
+
+.section-projects{
+    padding-left:4rem;
+    padding-right:4rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $brown1;
+
+    .title{
+        margin-bottom:2rem;
+        padding-top:.3rem;
+        padding-bottom:.3rem;
+        background-color: $brown3;
+        color:$brown4;
+        width:100%;
+        text-align: center;
+    }
+
+    .projects{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 2rem;
+        justify-content: space-around;
+
+        button{
+            border:0;
+            background-color: $brown1;
+            img{
+                max-width:1.5rem;
+            }
+        }
+
+        .project{
+            display:flex;
+            flex-direction: column;
+            background-color: $green1;
+            padding:2rem;
+
+            .image{
+                max-width:13rem;
+                min-width:13rem;
+                max-height:8rem;
+                min-width:8rem;
+                margin-top:1rem;
+                margin-bottom:1rem;
+            }
+
+            .dash{
+                background-color: $brown3;
+                min-width:4rem;
+                max-width: 4rem;
+                align-self: center;
+                min-height: .2rem;
+                max-height:.2rem;
+                color:transparent;
+                margin-top:1rem;
+                margin-bottom:.5rem;
+            }
+
+            .title{
+                padding:0;
+                margin:0;
+                margin-bottom:.5rem;
+                background-color: transparent;
+                color:$brown3;
+                text-transform: uppercase;
+            }
+
+            .link{
+                background-color: $brown3;
+                text-decoration: none;
+                color:$brown4;
+                text-align: center;
+                font-weight: 500;
+                font-size: .8rem;
+                padding-top:.2rem;
+                padding-bottom:.2rem;
+                margin-bottom:1rem;
+            }
+        }
+    }
+}
+
+.section-empty{
+    max-height:25rem;
+    min-height:25rem;
+}
+
+.section-about{
+    background-color: $brown1;
+    padding:4rem;
+    justify-content: space-around;
+
+    .text{
+        text-align: center;
+        margin-right:3.5rem;
+        .title{
+            font-size: 2.5rem;
+        }
+        p{
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        button{
+            margin-top:1rem;
+            text-transform: uppercase;
+            background-color: $brown1;
+            border: solid 1px $green1;
+            padding-left:3rem;
+            padding-right:3rem;
+            padding-top:.7rem;
+            padding-bottom:.7rem;
+            font-size: .7rem;
+        }
+    }
+
+    img{
+        max-height:29rem;
+    }
+}
+
+.section-contact{
+    background-color: $brown1;
+    padding:4rem;
+    justify-content: space-around;
+
+    .form{
+        margin-top:1rem;
+        display: flex;
+        flex-direction: column;
+        
+        .title{
+            margin-bottom:1.5rem;
+            padding-top:.3rem;
+            padding-bottom:.3rem;
+            background-color: $brown3;
+            color:$brown4;
+            width:100%;
+            text-align: center;
+        }
+
+        input{
+            width:45%;
+            margin-bottom:1.5rem;
+        }
+
+        textarea{
+            margin-bottom: 1.5rem;
+        }
+
+        button{
+            text-transform: uppercase;
+            color: $brown1;
+            background-color: $green1;
+            padding-top:1rem;
+            padding-bottom:1rem;
+            border: none;
+        }
+
+    }
+
+    img{
+        transform: scaleX(-1);
+        max-height:28rem;
+        margin-right:3.5rem;
+    }
+}
+
+.section-blog{
+    background-color: $green1;
+
+    .title{
+        background-color: $brown4;
+        color: $brown1;
+        padding-top:.5rem;
+        padding-bottom:.5rem;
+        padding-left:1rem;
+        padding-right:1rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        max-width:9rem;
+        position: absolute;
+        right:5rem;
+        margin-top:-2rem;
+    }
+    
+    p{
+        margin:2rem;
+        color:$brown1;
+        margin-bottom:10rem;
+    }
+}
+
+footer{
+    background-color: $green2;
+    color: $brown1;
+    text-align: center;
+    padding:5rem;
+}
+
+@media only screen and (max-width: 1115px){
+    .section-intro{
+        .left{
+            padding-right:.3rem;
+        }
+        .right{
+            padding-left: 0rem;
+        }
+    }
+
 }
