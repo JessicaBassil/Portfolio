@@ -1,7 +1,6 @@
 @import "./colors.scss", "fonts.scss", "flex.scss";
 @import "./generic-design.scss", "./general-classes.scss";
 @import "./keyframes.scss";
-
 header{
     background-color: $brown1;
     padding:1rem;
@@ -23,10 +22,15 @@ header{
         line-height: 0rem;
         padding-bottom:1rem;
     }
+
+    .initial:hover{
+        animation: .5s letter-dance ease;
+        transition: all .5s ease;
+    }
 }
 
 nav{
-    z-index:10;
+    z-index:99;
     background-color: $brown2;
     font-family: $thin-spaced;
     text-transform: uppercase;
@@ -52,14 +56,20 @@ nav{
         }
 
     }
+
+    button{
+        display: none;
+    }
 }
 
 .section-intro{
     background-color: $brown3;
     max-height:60vh;
     justify-content: space-around;
+    align-items: center;
 
     .left{
+        background-color: $brown3;
         padding:2rem;
         padding-left:3rem;
         min-width: 18rem;
@@ -70,7 +80,7 @@ nav{
         }
 
         .body-tag{
-            padding-left: 1.2rem;
+            padding-left: 1.2rem; 
         }
 
         .title{
@@ -79,10 +89,17 @@ nav{
     }
 
     .right{
+        z-index:10;
         background-color: $green1;
         padding-left:6rem;
         img{
             max-height:60vh;
+        }
+        .side-text{
+            max-height:40vh;
+            align-self: center;
+            margin-left:1rem;
+            margin-right:1rem;
         }
     }
 }
@@ -116,21 +133,16 @@ nav{
         flex-direction: row;
         padding-bottom: 2rem;
         justify-content: space-around;
-
-        button{
-            border:0;
-            background-color: $brown1;
-            img{
-                max-width:1.5rem;
-            }
-        }
+        flex-wrap: wrap;
 
         .project{
+            transition:all 1s ease;
             display:flex;
             flex-direction: column;
             background-color: $green1;
-            padding:2rem;
-
+            padding:1rem;
+            margin:.1rem;
+            margin-bottom:2rem;
             .image{
                 max-width:13rem;
                 min-width:13rem;
@@ -138,6 +150,18 @@ nav{
                 min-width:8rem;
                 margin-top:1rem;
                 margin-bottom:1rem;
+            
+                border: solid 1px $green1;
+                padding:.5rem;
+                
+                transition:all 1s ease;
+            }
+
+            .image:hover{
+                background-color: $brown1;
+                box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+                border: solid 1px $brown1;
+                transition:all 1s ease;
             }
 
             .dash{
@@ -150,6 +174,14 @@ nav{
                 color:transparent;
                 margin-top:1rem;
                 margin-bottom:.5rem;
+                cursor:default;
+                
+                transition: all 1s ease;
+            }
+            .dash:hover{
+                max-width:13rem;
+                min-width: 13rem;
+                transition: all 1s ease;
             }
 
             .title{
@@ -159,6 +191,7 @@ nav{
                 background-color: transparent;
                 color:$brown3;
                 text-transform: uppercase;
+                cursor: default
             }
 
             .link{
@@ -171,7 +204,21 @@ nav{
                 padding-top:.2rem;
                 padding-bottom:.2rem;
                 margin-bottom:1rem;
+                transition:all 1s ease;
             }
+            .link:hover{
+                box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+                transition:all 1s ease;
+            }
+        }
+        .project:hover{
+            background-color: $green1;
+            animation:1s make3d ease;
+            box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+            transition:all 1s ease;
+            position: relative;
+            bottom:.3rem;
+            right:.3rem;
         }
     }
 }
@@ -206,11 +253,17 @@ nav{
             padding-top:.7rem;
             padding-bottom:.7rem;
             font-size: .7rem;
+            transition:all 1s ease;
+        }
+        button:hover{
+            box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+            transition:all 1s ease;
         }
     }
 
     img{
-        max-height:29rem;
+        max-height:25rem;
+        align-self: center;
     }
 }
 
@@ -250,8 +303,12 @@ nav{
             padding-top:1rem;
             padding-bottom:1rem;
             border: none;
+            transition:all 1s ease;
         }
-
+        button:hover{
+            box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.3);
+            transition:all 1s ease;
+        }
     }
 
     img{
@@ -299,7 +356,138 @@ footer{
         }
         .right{
             padding-left: 0rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            img{
+                display: flex;
+                flex-shrink: 0;
+                min-width: 100%;
+                min-height: 100%;
+            }
+            .side-text{
+                display: none;
+            }
         }
     }
 
+    .section-about{
+        flex-direction: column;
+        .text{
+            margin-bottom: 3rem;
+        }
+    }
+
+    .section-contact{
+        img{
+            max-height: 25rem;
+        }
+    }
+
+    .section-about{
+        img{
+            max-height: 20rem;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 804px){
+
+    nav{
+        .links a{
+            display: none;
+        }
+        .socials a{
+            display: none;
+        }
+        button{
+            display: block;
+            background-color: $brown2;
+            border:0;
+            font-size:1.9rem;
+            padding:.2rem;
+            display: flex;
+        }
+
+        .close{
+            display: none;
+        }
+        
+        transition: all 1s ease;
+    }
+
+    .section-intro{
+        .right{
+            background-color: $green1;
+            min-height:100%;
+            img{display: none;}
+            .side-text{
+                display: block;
+                margin:0;
+                padding:2rem;                
+            }
+        }
+    }
+
+    .section-contact{
+        flex-direction: column;
+    }
+
+    .open{
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding-left: 5rem;
+        transition: all 1s ease;
+
+        .menu{
+            display: none;
+        }
+
+        .close{
+            display: block;
+            font-size: 2rem;
+            display: flex;
+            margin-bottom:5rem;
+            padding-left: 0rem;
+            transition: all 1s ease;
+        }
+
+        .close:hover{
+            transform:rotate(-20deg);
+            transition: all 1s ease;
+        }
+
+        .links a{
+            display: block;
+            font-size:2rem;
+            padding-left:0rem;
+        }
+
+        .socials a{
+            margin-top:5rem;
+            display: block;
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 550px){
+
+    .section-intro{
+        .right{
+            .side-text{
+                display: none;
+            }
+        }
+    }
 }

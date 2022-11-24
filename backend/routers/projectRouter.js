@@ -10,13 +10,12 @@ projectRouter.get('/seed', expressAsyncHandler(async(req,res)=>{
     await Project.remove({});
     const createdProjects = await Project.insertMany(projects)
     res.send({createdProjects});
-
 }))
 
 projectRouter.get('/', expressAsyncHandler(async(req,res)=>{
     try{
-    const projects = await Project.find({});
-    res.send(projects);
+        const projects = await Project.find({});
+        res.send(projects);
     }catch(error){
         res.send(error);
     }

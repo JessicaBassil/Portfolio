@@ -1,11 +1,11 @@
 @keyframes letter-dance {
     0%{
-        color: white;
-    }
-    25%{
-        color: black;
         position: relative;
-        bottom: .2rem;
+        bottom: 0;
+    }
+    50%{
+        position: relative;
+        bottom: .5rem;
     }
     100%{
         bottom: 0rem;
@@ -24,4 +24,154 @@
     100%{
         bottom: 0rem;
     }
+}
+
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+        content: "Full Stack Developer";
+    }
+    25%{
+        opacity: 1;
+        transform: translateY(0%);
+        content: "Full Stack Developer";
+    }
+    50%{
+        opacity: 0;
+        transform: translateY(100%);
+        content: "Full Stack Developer";
+    }
+    51% {
+        opacity: 0;
+        transform: translateY(-100%);
+        content: "Software Engineer";
+    }
+    75%{
+        opacity: 1;
+        transform: translateY(0%);
+        content: "Software Engineer";
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(100%);
+        content: "Software Engineer";
+    }
+  
+}
+
+
+@keyframes BgBrown {
+    0%{
+        border-radius: 0rem;
+    }
+    50%{
+        border-top-left-radius: 20rem;
+    }
+    100%{
+        border-bottom-right-radius: 20rem;
+
+    }
+}
+
+@keyframes blur{
+    0% {
+        color: transparent;
+        text-shadow: 0 0 8px #000;
+    }
+    80%{
+        color: black;
+        text-shadow: none;
+    }
+    100%{
+        color: black;
+        text-shadow: none;
+    }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+@keyframes slide-toleft {
+    0% { 
+        transform: translateX(100%);
+    }
+    50%{
+        transform: translateX(0%);
+    }
+    100% { 
+        transform: translateX(0%);
+    }
+}
+@keyframes slide-toright {
+    0% { 
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(0%);
+    }
+    100% { 
+        transform: translateX(0%);
+    }
+}
+
+@keyframes make3d {
+    0%{
+        position: relative;
+    }
+    20%{
+        position: relative;
+        bottom:.1rem;
+        right:.1rem;
+    }
+    100%{
+        position: relative;
+        bottom:.3rem;
+        right:.3rem;
+    }
+}
+
+@keyframes slidedown {
+    0% { 
+        margin-top:-50px; 
+    }
+    30%{
+        margin-top:-10px;
+    }
+    100% { 
+        margin-top:0px; 
+    }
+}
+
+
+.slidein{
+    animation: 2s slidein ease;
+}
+.slidein::before{
+    animation: 2s slidein ease;   
+}
+.slidedown{
+    animation: 2s slidedown ease;   
+}
+.slidedown::before{
+    animation: 2s slidedown ease;   
+}
+.blur{
+    animation: 3s blur ease;
+}
+.blur::before{
+    animation: 3s blur ease;
+}
+
+.slide-toleft{
+    animation: 3s slide-toleft ease;
+}
+.slide-toright{
+    animation: 3s slide-toright ease;
 }
