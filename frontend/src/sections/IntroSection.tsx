@@ -13,7 +13,6 @@ function IntroSection() {
           I&apos;m a programmer always looking to improve my skills and create and contribute to
           softwares
         </span>
-        <br />
         <span className='handwriting-font body-tag'>&lt;body&gt;</span>
         <span className='handwriting-font'>&lt;html&gt;</span>
       </div>

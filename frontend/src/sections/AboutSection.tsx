@@ -1,4 +1,5 @@
 import aboutimg from '../svgs/aboutimg.svg'
+import React from 'react'
 
 function AboutSection() {
   return (
@@ -19,7 +20,9 @@ function AboutSection() {
           drawing and giving back to the humanity. <br />I also speak 3 languages on a professional
           level (French, English, Arabic)
         </p>
-        <button className='xbold-spaced-font'>DOWNLOAD CV</button>
+        <a download href='cv.pdf' className='xbold-spaced-font'>
+          DOWNLOAD CV
+        </a>
       </div>
       <img src={aboutimg} />
     </div>

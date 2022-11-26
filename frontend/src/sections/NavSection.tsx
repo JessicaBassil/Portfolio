@@ -34,13 +34,13 @@ function NavSection() {
         </a>
       </div>
       <div className='socials  slide-toleft'>
-        <a href='youtubelink'>
+        <a href='https://youtube.com'>
           <Icon className='icon' icon='akar-icons:youtube-fill' />
         </a>
-        <a href='githublink'>
+        <a href='https://github.com/JessicaBassil'>
           <Icon icon='akar-icons:github-fill' />
         </a>
-        <a href='linkedinlink'>
+        <a href='https://www.linkedin.com/in/jessica-bassil-260057190/'>
           <Icon icon='akar-icons:linkedin-box-fill' />
         </a>
       </div>
