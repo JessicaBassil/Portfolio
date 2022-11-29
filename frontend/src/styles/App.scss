@@ -150,10 +150,6 @@ nav{
             margin:.1rem;
             margin-bottom:2rem;
             .image{
-                max-width:13rem;
-                min-width:13rem;
-                max-height:8rem;
-                min-width:8rem;
                 margin-top:1rem;
                 margin-bottom:1rem;
             
@@ -161,6 +157,12 @@ nav{
                 padding:.5rem;
                 
                 transition:all 1s ease;
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                height:7.5rem;
+                min-width:12rem;
+                max-width:10rem;
             }
 
             .image:hover{
@@ -218,6 +220,7 @@ nav{
                 transition:all 1s ease;
             }
 
+
             .details{
                 position: fixed;
                 top:0;
@@ -231,7 +234,7 @@ nav{
                 justify-items: center;
                 overflow-y:auto;
                 transition: all 1s ease;
-                animation: 1s zoom ease;
+                animation: 1s slide-totop ease;
 
                 .close{
                     background-color: transparent;
@@ -243,7 +246,10 @@ nav{
                     max-width:3.5rem;
                     text-align: center;
                     align-self:center;
-                    display: flex;
+                    display: flex;                
+                    transition: all 1s ease;
+                    animation: 1s slide-toright ease;
+    
                 }
                 .close:hover{
                     transform:rotate(-20deg);
@@ -261,7 +267,10 @@ nav{
                 }
 
                 .carousel{
-                    max-height:60vh;
+                    max-height:60vh;                    
+                    transition: all 1s ease;
+                    animation: 1s slide-toleft ease;
+
                     div{
                         background-size:contain;
                         background-repeat: no-repeat;
@@ -278,6 +287,8 @@ nav{
                     margin-top:1rem;
                     align-self: center;
                     text-decoration: underline;
+                    transition: all 1s ease;
+                    animation: 1s slide-toright ease;
                 }
 
                 .desc{
@@ -287,6 +298,8 @@ nav{
                     padding-right:2rem;
                     padding-top:0rem;
                     padding-bottom:1rem;
+                    transition: all 1s ease;
+                    animation: 1s slide-toleft ease;
                 }
             }
         }
@@ -558,6 +571,30 @@ footer{
         }
     }
 
+    .section-projects{
+        .details{
+            .title{
+                font-size:3rem !important;
+                margin-bottom:1rem !important;
+            }
+            a{
+                font-size:1.2rem !important; 
+            }
+            .carousel{
+                max-height:40vh;
+                div{
+                    height:40vh;
+                }
+            }
+
+            .desc{
+                h1{
+                    font-size: 1.4rem !important;
+                }
+            }
+        }
+    }
+
 }
 
 @media only screen and (max-width: 550px){
@@ -571,7 +608,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 300px){
+@media only screen and (max-width: 350px){
     .section-intro{
         padding:0rem !important;
         max-width:100%;
@@ -595,6 +632,7 @@ footer{
         img{
             max-height:30vh;
             margin-bottom:2rem;
+            max-width: 8rem !important;
         }
     }
 
@@ -608,4 +646,5 @@ footer{
             }
         }
     }
+
 }

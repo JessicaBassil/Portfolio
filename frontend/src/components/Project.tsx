@@ -18,7 +18,10 @@ function Project(props: { project: IProject }) {
   return (
     <>
       <div className='project'>
-        <img alt='project gif' className='image' src={require(`../images/${project.image}`)} />
+        <div
+          className='image'
+          style={{ backgroundImage: 'url(' + require(`../images/${project.image}`) + ')' }}
+        ></div>
 
         <div className='dash'>_</div>
 

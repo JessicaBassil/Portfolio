@@ -7,6 +7,13 @@ export const projects = [
       description: "<h1>Technologies used:</h1>ReactJs, NodeJs, Express, MongoDb, Postman API \r\n <h2>Description:</h2>This is an ecommerce website ensuring :\r\n <ul><li>authentification,</li><li>adding items to cart,</li><li>searching and filtering products,</li><li>reviewing products,</li><li>admin view and rights (dashboard + managing users and other data),</li><li>seller view and rights (adding products),</li><li>payment via paypal or stripe,</li><li>tracking orders,</li><li>Online Chat support.</li></ul>"
     },
     {
+      title: 'Transactions App',
+      image: 'transactionsappimg.png',
+      medias: ['GTC1.png', 'GTC2.png', 'GTC3.png', 'GTC4.png', 'GTC5.png', 'GTC6.png'],
+      github: 'https://github.com/',
+      description: "amazing test project 2"
+    },
+    {
       title: 'Portfolio Website',
       image: 'test.png',
       medias: ['test.png', 'test.png', 'test.png'],
@@ -14,7 +21,7 @@ export const projects = [
       description: "amazing test project 2"
     },
     {
-      title: 'dating app',
+      title: 'Dating App',
       image: 'test.png',
       medias: ['test.png', 'test.png', 'test.png'],
       description: "amazing test project 3"

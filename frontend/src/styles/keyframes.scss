@@ -120,7 +120,28 @@
         transform: translateX(0%);
     }
 }
-
+@keyframes slide-tobottom {
+    0% { 
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    100% { 
+        transform: translateY(0%);
+    }
+}
+@keyframes slide-totop {
+    0% { 
+        transform: translateY(100%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    100% { 
+        transform: translateY(0%);
+    }
+}
 @keyframes make3d {
     0%{
         position: relative;
