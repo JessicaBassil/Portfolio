@@ -36,6 +36,10 @@ function ContactSection() {
       setError('')
       const response = await axios.post('http://localhost:5000/api/messages', data)
       console.log(response)
+      setError('Thank you for reaching out to me. I will get back to you as soon as possible.')
+      setDescription('')
+      setFullname('')
+      setEmail('')
     } catch (err) {
       console.log(err)
       setError('' + err)
