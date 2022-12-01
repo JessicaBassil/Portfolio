@@ -67,6 +67,18 @@ input:focus, textarea:focus{
     font-family: $regular;
 }
 
+/* CUSTOM SELECTION COLOR */
+::selection {
+	color: $brown2;
+	background-color: $green2;
+}
+
+/* for firefox */
+::moz-selection {
+	color: $brown2;
+	background-color: $green2;
+}
+
 /* CUSTOM SCROLLBAR */
 /* width */
 ::-webkit-scrollbar {

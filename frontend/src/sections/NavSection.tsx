@@ -1,8 +1,10 @@
 import { Icon } from '@iconify/react'
 import { useState } from 'react'
+import ReactPlayer from 'react-player'
 
 function NavSection() {
   const [openNav, setOpenNav] = useState(false)
+  const [musicPlaying, setMusicPlaying] = useState(false)
 
   const toggleNav = () => {
     setOpenNav(!openNav)
@@ -10,6 +12,13 @@ function NavSection() {
 
   return (
     <nav className={openNav ? 'flex open' : 'flex'}>
+      <ReactPlayer
+        playing={musicPlaying}
+        loop={true}
+        url='https://soundcloud.com/thekingcairns/you-can-be-king-again'
+        className='mediaplayer'
+      />
+
       <div className='links slide-toright'>
         <button onClick={toggleNav} className='menu'>
           <Icon icon='material-symbols:menu' />
@@ -42,6 +51,13 @@ function NavSection() {
         </a>
         <a href='https://www.linkedin.com/in/jessica-bassil-260057190/'>
           <Icon icon='akar-icons:linkedin-box-fill' />
+        </a>
+        <a onClick={() => setMusicPlaying(!musicPlaying)}>
+          {musicPlaying ? (
+            <Icon icon='fluent:music-note-2-24-filled' />
+          ) : (
+            <Icon icon='fluent:music-note-off-2-24-filled' />
+          )}
         </a>
       </div>
     </nav>

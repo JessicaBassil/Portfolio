@@ -1,6 +1,10 @@
 @import "./colors.scss", "fonts.scss", "flex.scss";
 @import "./generic-design.scss", "./general-classes.scss";
 @import "./keyframes.scss";
+.mediaplayer{
+    display: none;
+}
+
 header{
     background-color: $brown1;
     padding:1rem;

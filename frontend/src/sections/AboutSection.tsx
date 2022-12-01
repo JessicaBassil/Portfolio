@@ -17,7 +17,7 @@ function AboutSection() {
         </p>
         <p className='light-spaced-font'>
           Other than programmming, I like reading and watching series the most but I also enjoy
-          drawing and giving back to the humanity. <br />I also speak 3 languages on a professional
+          drawing and exploring different hobbies. <br />I also speak 3 languages on a professional
           level (French, English, Arabic)
         </p>
         <a download href='cv.pdf' className='xbold-spaced-font'>
